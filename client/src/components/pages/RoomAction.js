@@ -13,7 +13,7 @@ class RoomAction extends Component {
             block: this.props.match.params.id,
             id: '',
             type: '',
-            incharge: '',
+            worker: '',
             time: '',
             gender: '',
             errors: {},
@@ -34,7 +34,7 @@ class RoomAction extends Component {
         console.log(this.props.match.params.id);
         const activityRecord = {
             type: this.state.type,
-            incharge: this.state.incharge,
+            worker: this.state.worker,
             block: this.state.block,
             id: this.state.id,
             gender: this.state.gender,
@@ -43,7 +43,7 @@ class RoomAction extends Component {
         console.table(activityRecord);
         await this.props.createRoomAction(activityRecord);
         this.setState({
-            incharge: '',
+            worker: '',
             type: '',
             id: '',
             gender: '',
@@ -71,7 +71,7 @@ class RoomAction extends Component {
                     <td>{el.id ? el.id : "-"}</td>
                     <td>{el.type ? el.type : "-"}</td>
                     <td>{el.time ? el.time : "-"}</td>
-                    <td>{el.incharge ? el.incharge : "-"}</td>
+                    <td>{el.worker ? el.worker : "-"}</td>
                     <td>{el.gender ? el.gender : "-"}</td>
                     <td style={{ cursor: 'pointer', color: '#00a4eb' }}
                         onClick=
@@ -141,32 +141,17 @@ class RoomAction extends Component {
                             )}
                         </div>
                         <div className="col">
-                            <label htmlFor="incharge">Incharge</label>
-                            <input type="text" id="incharge" placeholder="Incharge Name"
+                            <label htmlFor="worker">Worker</label>
+                            <input type="text" id="worker" placeholder="Worker Name"
                                 className={classnames("form-control", {
-                                    "is-invalid": errors.incharge
+                                    "is-invalid": errors.worker
                                 })}
                                 onChange={this.onChange}
-                                name="incharge"
-                                value={this.state.incharge}
+                                name="worker"
+                                value={this.state.worker}
                             />
-                            {errors.incharge && (
-                                <div className="invalid-tooltip">{errors.incharge}</div>
-                            )}
-                        </div>
-                        <div className="col">
-                            <label htmlFor="exampleFormControlSelect1">Room Occupancy</label>
-                            <select className={classnames("form-control", {
-                                "is-invalid": errors.gender
-                            })}
-                                id="exampleFormControlSelect1" onChange={this.onChange} value={this.state.gender}
-                                name="gender"
-                            >   <option value="" defaultValue disabled>Select</option>
-                                <option>GIRL</option>
-                                <option>BOY</option>
-                            </select>
-                            {errors.gender && (
-                                <div className="invalid-tooltip">{errors.gender}</div>
+                            {errors.worker && (
+                                <div className="invalid-tooltip">{errors.worker}</div>
                             )}
                         </div>
                         <div className="col-auto" >
@@ -183,8 +168,7 @@ class RoomAction extends Component {
                                 <th scope="col">Room No.</th>
                                 <th scope="col">Action</th>
                                 <th scope="col">Date and Time</th>
-                                <th scope="col">Incharge</th>
-                                <th scope="col">Room Occupancy</th>
+                                <th scope="col">Worker</th>
                                 <th scope="col">Delete</th>
                             </tr>
                         </thead>
