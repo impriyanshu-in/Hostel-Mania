@@ -81,7 +81,7 @@ class StudentDetails extends Component {
                     <td>{el.id ? el.id : "-"}</td>
                     <td>{el.hostel ? el.hostel : "-"}</td>
                     <td>{el.room ? el.room : "-"}</td>
-                    <td>{el.gender ? el.gender : "-"}</td>
+                    {/* <td>{el.gender ? el.gender : "-"}</td> */}
                     <td>{el.isAvailable ? <button type="button" className="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Click to Mark Absent"
                         onClick={() => this.onStatusChange(el.id, el.isAvailable)}
                     >
@@ -161,14 +161,17 @@ class StudentDetails extends Component {
                         </div>
                         <div className="col">
                             <label htmlFor="hostel">Hostel</label>
-                            <input type="text" id="hostel" placeholder="Hostel"
-                                className={classnames("form-control", {
-                                    "is-invalid": errors.hostel
-                                })}
-                                onChange={this.onChange}
+                            <select className={classnames("form-control", {
+                                "is-invalid": errors.hostel
+                            })}
+                                id="hostel" onChange={this.onChange} value={this.state.hostel}
                                 name="hostel"
-                                value={this.state.hostel}
-                            />
+                            >   <option value="" defaultValue disabled>Select Hostel</option>
+                                <option value="BH 1">BH-1</option>
+                                <option value="BH 2">BH-2</option>
+                                <option value="BH 3">BH-3</option>
+                                <option value="GH">GH</option>
+                            </select>
                             {errors.hostel && (
                                 <div className="invalid-tooltip">{errors.hostel}</div>
                             )}
@@ -219,7 +222,7 @@ class StudentDetails extends Component {
                                 <th scope="col">Room No.</th>
                                 {/* <th scope="col">Gender</th> */}
                                 <th scope="col">Leave Status</th>
-                                <th scope="col">Delete?</th>
+                                <th scope="col">Delete</th>
                             </tr>
                         </thead>
                         <tbody>

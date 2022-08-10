@@ -100,7 +100,7 @@ class Student extends Component {
                     <td>{el.id ? el.id : "-"}</td>
                     <td>{el.hostel ? el.hostel : "-"}</td>
                     <td>{el.room ? el.room : "-"}</td>
-                    <td>{el.gender ? el.gender : "-"}</td>
+                    {/* <td>{el.gender ? el.gender : "-"}</td> */}
                     <td>{el.isAvailable ? <button type="button" className="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Click to Mark Absent"
                         onClick={() => this.onStatusChange(el.id, el.isAvailable)}
                     >
