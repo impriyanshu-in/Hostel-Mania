@@ -38,16 +38,16 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
 
 // PUT
 // Assign a cleaner to a given room id
-// router.put('/worker/:id', passport.authenticate('jwt', {session: false}), (req, res) => {
+// router.put('/incharge/:id', passport.authenticate('jwt', {session: false}), (req, res) => {
 //   const { errors, isValid } = validateCleanerInput(req.body)
 //   if(!isValid) return res.status(400).json(errors)
 
-//   const { worker } = req.body;
+//   const { incharge } = req.body;
 //   const { id } = req.params;
 
-//   Room.findOneAndUpdate(id, {$set: { worker }})
-//     .then(data => res.json({success: true, message: 'Worker has been updated.'}))
-//     .catch(err => res.status(400).json({...err, message: 'Failed to update the worker'}))
+//   Room.findOneAndUpdate(id, {$set: { incharge }})
+//     .then(data => res.json({success: true, message: 'Incharge has been updated.'}))
+//     .catch(err => res.status(400).json({...err, message: 'Failed to update the incharge'}))
 // })
 
 // Assign room to a studnet

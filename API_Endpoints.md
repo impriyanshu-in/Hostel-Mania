@@ -85,19 +85,19 @@ Response: { message: `Student with ID ${id} has been deleted`, success: true }
 1. `/api/room/block/:block` - To get the room of a given `:block`
 ```
 Request Type: GET
-Response: [{id:'Type String', type:'CLEANING or REPAIR', block:'A or B or C or D', worker:, time:'Type String', gender:'BOY or GIRL'}, ...]
+Response: [{id:'Type String', type:'CLEANING or REPAIR', block:'A or B or C or D', incharge:, time:'Type String', gender:'BOY or GIRL'}, ...]
 ```
 
 2. `/api/room/all` - To Get all the rooms
 ```
 Request Type: GET
-Response: [{id:'Type String', type:'CLEANING or REPAIR', block:'A or B or C or D', worker:, time:'Type String', gender:'BOY or GIRL'}, ...]
+Response: [{id:'Type String', type:'CLEANING or REPAIR', block:'A or B or C or D', incharge:, time:'Type String', gender:'BOY or GIRL'}, ...]
 ```
 
 3. `/api/room/` - To add new room
 ```
 Request Type: POST
-Request Body: {id:'Type String', type:'CLEANING or REPAIR', block:'A or B or C or D', worker:, time:'Type String', gender:'BOY or GIRL'}
+Request Body: {id:'Type String', type:'CLEANING or REPAIR', block:'A or B or C or D', incharge:, time:'Type String', gender:'BOY or GIRL'}
 Response: { success: true, message: 'Room has been created.' }
 ```
 

@@ -18,7 +18,7 @@ const RoomSchema = new Schema({
     required: true,
     trim: true
   },
-  worker: {
+  incharge: {
     type: String,
     trim: true,
   },

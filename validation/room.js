@@ -7,13 +7,13 @@ const validateRoomInput = data => {
   const blocks = ['A', 'B', 'C', 'D'];
   const genders = ['BOY', 'GIRL'];
   const work = ['CLEANING', 'REPAIR'];
-  const { id, block, gender, type, worker, time } = data
+  const { id, block, gender, type, incharge, time } = data
 
   data.id = !isEmpty(data.id) ? data.id : "";
   data.block = !isEmpty(data.block) ? data.block : "";
   data.gender = !isEmpty(data.gender) ? data.gender : "";
   data.type = !isEmpty(data.type) ? data.type : "";
-  data.worker = !isEmpty(data.worker) ? data.worker : "";
+  data.incharge = !isEmpty(data.incharge) ? data.incharge : "";
   data.time = !isEmpty(data.time) ? data.time : "";
 
 
@@ -32,8 +32,8 @@ const validateRoomInput = data => {
   if (Validator.isEmpty(type) || !work.includes(type)) {
     errors.type = "Action Missing or Invalid";
   }
-  if (Validator.isEmpty(worker)) {
-    errors.worker = "Worker Name Required";
+  if (Validator.isEmpty(incharge)) {
+    errors.incharge = "Incharge Name Required";
   }
   if (Validator.isEmpty(time)) {
     errors.time = "Date and Time Required";
