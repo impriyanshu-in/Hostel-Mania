@@ -12,7 +12,7 @@ const RoomSchema = new Schema({
     type: String,
     enum: ['CLEANING', 'REPAIR']
   },
-  block: {
+  hostel: {
     type: String,
     enum: ['A', 'B', 'C', 'D'],
     required: true,

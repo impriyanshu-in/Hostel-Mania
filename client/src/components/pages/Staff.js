@@ -88,7 +88,7 @@ class Staff extends Component {
         const { errors } = this.state;
         return (
             <div className="mid container">
-                <h1>{this.state.block}</h1>
+                <h1>{this.state.hostel}</h1>
                 <br />
                 <form onSubmit={this.onSubmit}>
                     <div className="row">

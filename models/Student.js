@@ -26,7 +26,7 @@ const StudentSchema = new Schema({
   room: {
     type: String,
   },
-  block: {
+  hostel: {
     type: String,
     enum: ['A', 'B', 'C', 'D'],
     trim: true,

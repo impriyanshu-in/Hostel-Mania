@@ -9,7 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import PrivateRoute from './common/PrivateRoute';
 import Student from './pages/Student';
 import StudentDetails from './pages/StudentDetails';
-import Block from './pages/Block';
+import Hostel from './pages/Hostel';
 import RoomAction from "./pages/RoomAction";
 import Staff from './pages/Staff';
 
@@ -22,7 +22,7 @@ class Routes extends Component {
                     <Route exact path="/" component={Home} />
                     <PrivateRoute exact path="/dashboard" component={Dashboard} />
                     <PrivateRoute exact path="/student" component={Student} />
-                    <PrivateRoute exact path="/block" component={Block} />
+                    <PrivateRoute exact path="/hostel" component={Hostel} />
                     <PrivateRoute exact path="/room/:id" component={RoomAction} />
                     <PrivateRoute exact path="/staff" component={Staff} />
                     <PrivateRoute exact path="/studentdetails/:id" component={StudentDetails} />

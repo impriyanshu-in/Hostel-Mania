@@ -16,7 +16,7 @@ class StudentDetails extends Component {
             id: '',
             gender: '',
             room: '',
-            block: '',
+            hostel: '',
             isAvailable: true,
             errors: {}
         }
@@ -36,7 +36,7 @@ class StudentDetails extends Component {
             batch: this.state.batch,
             id: this.state.id,
             room: this.state.room,
-            block: this.state.block,
+            hostel: this.state.hostel,
             gender: this.state.gender,
         }
         await this.props.createStudentDetails(studentDetailsData);
@@ -46,7 +46,7 @@ class StudentDetails extends Component {
             id: '',
             gender: '',
             room: '',
-            block: '',
+            hostel: '',
             errors: {}
         });
     }
@@ -79,7 +79,7 @@ class StudentDetails extends Component {
                     <td>{el.name ? el.name : "-"}</td>
                     <td>{el.email ? el.email : "-"}</td>
                     <td>{el.id ? el.id : "-"}</td>
-                    <td>{el.block ? el.block : "-"}</td>
+                    <td>{el.hostel ? el.hostel : "-"}</td>
                     <td>{el.room ? el.room : "-"}</td>
                     <td>{el.gender ? el.gender : "-"}</td>
                     <td>{el.isAvailable ? <button type="button" className="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Click to Mark Absent"
@@ -160,17 +160,17 @@ class StudentDetails extends Component {
                             )}
                         </div>
                         <div className="col">
-                            <label htmlFor="block">Block</label>
-                            <input type="text" id="block" placeholder="Block"
+                            <label htmlFor="hostel">Hostel</label>
+                            <input type="text" id="hostel" placeholder="Hostel"
                                 className={classnames("form-control", {
-                                    "is-invalid": errors.block
+                                    "is-invalid": errors.hostel
                                 })}
                                 onChange={this.onChange}
-                                name="block"
-                                value={this.state.block}
+                                name="hostel"
+                                value={this.state.hostel}
                             />
-                            {errors.block && (
-                                <div className="invalid-tooltip">{errors.block}</div>
+                            {errors.hostel && (
+                                <div className="invalid-tooltip">{errors.hostel}</div>
                             )}
                         </div>
                         <div className="col">
@@ -187,7 +187,7 @@ class StudentDetails extends Component {
                                 <div className="invalid-tooltip">{errors.room}</div>
                             )}
                         </div>
-                        <div className="col">
+                        {/* <div className="col">
                             <label htmlFor="gen">Gender</label>
                             <select className={classnames("form-control", {
                                 "is-invalid": errors.gender
@@ -201,7 +201,7 @@ class StudentDetails extends Component {
                             {errors.gender && (
                                 <div className="invalid-tooltip">{errors.gender}</div>
                             )}
-                        </div>
+                        </div> */}
                         <div className="col-auto" >
                             <button type="submit" style={{ verticalAlign: '-39px' }} className="btn btn-primary">Add</button>
                         </div>
@@ -215,9 +215,9 @@ class StudentDetails extends Component {
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">ID</th>
-                                <th scope="col">Block</th>
+                                <th scope="col">Hostel</th>
                                 <th scope="col">Room No.</th>
-                                <th scope="col">Gender</th>
+                                {/* <th scope="col">Gender</th> */}
                                 <th scope="col">Leave Status</th>
                                 <th scope="col">Delete?</th>
                             </tr>

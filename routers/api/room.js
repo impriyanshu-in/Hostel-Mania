@@ -7,10 +7,10 @@ const { validateRoomInput } = require('../../validation/room')
 
 // GET
 // Get a single room defined by id
-router.get('/block/:block', passport.authenticate('jwt', { session: false }), (req, res) => {
-  const { block } = req.params
+router.get('/hostel/:hostel', passport.authenticate('jwt', { session: false }), (req, res) => {
+  const { hostel } = req.params
 
-  Room.find({ block }).then(room => res.json(room))
+  Room.find({ hostel }).then(room => res.json(room))
     .catch(err => res.status(400).json({ ...err, message: 'Failed to fetch rooms' }))
 })
 
@@ -27,7 +27,7 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
   const { errors, isValid } = validateRoomInput(req.body)
   if (!isValid) return res.status(400).json(errors)
 
-  // const { id, block, gender } = req.body
+  // const { id, hostel, gender } = req.body
 
   const room = new Room(req.body)
 

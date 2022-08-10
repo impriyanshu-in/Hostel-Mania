@@ -98,7 +98,7 @@ class Student extends Component {
                     <td>{el.name ? el.name : "-"}</td>
                     <td>{el.email ? el.email : "-"}</td>
                     <td>{el.id ? el.id : "-"}</td>
-                    <td>{el.block ? el.block : "-"}</td>
+                    <td>{el.hostel ? el.hostel : "-"}</td>
                     <td>{el.room ? el.room : "-"}</td>
                     <td>{el.gender ? el.gender : "-"}</td>
                     <td>{el.isAvailable ? <button type="button" className="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Click to Mark Absent"
@@ -199,9 +199,9 @@ class Student extends Component {
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">ID</th>
-                                <th scope="col">Block</th>
+                                <th scope="col">Hostel</th>
                                 <th scope="col">Room No.</th>
-                                <th scope="col">Gender</th>
+                                {/* <th scope="col">Gender</th> */}
                                 <th scope="col">Leave Status</th>
                                 <th scope="col">Delete</th>
                             </tr>

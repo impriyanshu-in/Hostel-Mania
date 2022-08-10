@@ -38,32 +38,32 @@ Response: {id: 'Type String', name: 'Type String', email: 'Type String'}
 1. `/api/student/` - To add a new Student
 ```
 Request Type: POST
-Reuqest Body: {name:'Type String', email:'Type String', batch:'Type String', id:'Type String', block:'Type String', room:'Type String', gender: 'MALE or FEMALE'}
-Response: {name:'Type String', email:'Type String', batch:'Type String', id:'Type String', block:'Type String', room:'Type String', gender: 'MALE or FEMALE'}
+Reuqest Body: {name:'Type String', email:'Type String', batch:'Type String', id:'Type String', hostel:'Type String', room:'Type String', gender: 'MALE or FEMALE'}
+Response: {name:'Type String', email:'Type String', batch:'Type String', id:'Type String', hostel:'Type String', room:'Type String', gender: 'MALE or FEMALE'}
 ```
 
 2. `/api/student/batch/:batch` - To get the students of given `:batch`
 ```
 Request Type: GET
-Response: [{name:'Type String', email:'Type String', batch:'Type String', id:'Type String', block:'Type String', room:'Type String', gender: 'MALE or FEMALE'}, ...]
+Response: [{name:'Type String', email:'Type String', batch:'Type String', id:'Type String', hostel:'Type String', room:'Type String', gender: 'MALE or FEMALE'}, ...]
 ```
 
 3. `/api/student/room/:room` - To get the students of given `:room`
 ```
 Request Type: GET
-Response: [{name:'Type String', email:'Type String', batch:'Type String', id:'Type String', block:'Type String', room:'Type String', gender: 'MALE or FEMALE'}, ...]
+Response: [{name:'Type String', email:'Type String', batch:'Type String', id:'Type String', hostel:'Type String', room:'Type String', gender: 'MALE or FEMALE'}, ...]
 ```
 
 4. `/api/student/id/:id` - To get the student with given `:id`
 ```
 Request Type: GET
-Response: [{name:'Type String', email:'Type String', batch:'Type String', id:'Type String', block:'Type String', room:'Type String', gender: 'MALE or FEMALE'}]
+Response: [{name:'Type String', email:'Type String', batch:'Type String', id:'Type String', hostel:'Type String', room:'Type String', gender: 'MALE or FEMALE'}]
 ```
 
 5. `/api/student/all` - To get the details of all the students
 ```
 Request Type: GET
-Response: [{name:'Type String', email:'Type String', batch:'Type String', id:'Type String', block:'Type String', room:'Type String', gender: 'MALE or FEMALE'}, ...]
+Response: [{name:'Type String', email:'Type String', batch:'Type String', id:'Type String', hostel:'Type String', room:'Type String', gender: 'MALE or FEMALE'}, ...]
 ```
 
 6. `/api/student/availability` To update the student availability
@@ -82,22 +82,22 @@ Response: { message: `Student with ID ${id} has been deleted`, success: true }
 
 ### Endpoints for `/api/room`:
 
-1. `/api/room/block/:block` - To get the room of a given `:block`
+1. `/api/room/hostel/:hostel` - To get the room of a given `:hostel`
 ```
 Request Type: GET
-Response: [{id:'Type String', type:'CLEANING or REPAIR', block:'A or B or C or D', worker:, time:'Type String', gender:'BOY or GIRL'}, ...]
+Response: [{id:'Type String', type:'CLEANING or REPAIR', hostel:'A or B or C or D', worker:, time:'Type String', gender:'BOY or GIRL'}, ...]
 ```
 
 2. `/api/room/all` - To Get all the rooms
 ```
 Request Type: GET
-Response: [{id:'Type String', type:'CLEANING or REPAIR', block:'A or B or C or D', worker:, time:'Type String', gender:'BOY or GIRL'}, ...]
+Response: [{id:'Type String', type:'CLEANING or REPAIR', hostel:'A or B or C or D', worker:, time:'Type String', gender:'BOY or GIRL'}, ...]
 ```
 
 3. `/api/room/` - To add new room
 ```
 Request Type: POST
-Request Body: {id:'Type String', type:'CLEANING or REPAIR', block:'A or B or C or D', worker:, time:'Type String', gender:'BOY or GIRL'}
+Request Body: {id:'Type String', type:'CLEANING or REPAIR', hostel:'A or B or C or D', worker:, time:'Type String', gender:'BOY or GIRL'}
 Response: { success: true, message: 'Room has been created.' }
 ```
 

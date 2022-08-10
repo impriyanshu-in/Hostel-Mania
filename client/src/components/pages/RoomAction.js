@@ -10,7 +10,7 @@ class RoomAction extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            block: this.props.match.params.id,
+            hostel: this.props.match.params.id,
             id: '',
             type: '',
             worker: '',
@@ -35,7 +35,7 @@ class RoomAction extends Component {
         const activityRecord = {
             type: this.state.type,
             worker: this.state.worker,
-            block: this.state.block,
+            hostel: this.state.hostel,
             id: this.state.id,
             gender: this.state.gender,
             time: this.state.time,
@@ -83,16 +83,16 @@ class RoomAction extends Component {
         ) : null
         const { errors } = this.state;
 
-        const blockToHostel = (block) =>{
-            if(block == "A") return "Aravali (BH 1)"
-            if(block == "B") return "Nilgiri (BH 2)"
-            if(block == "C") return "Shivalik (BH 3)"
-            if(block == "D") return "Gangotri (GH)"
+        const blockToHostel = (hostel) =>{
+            if(hostel == "A") return "Aravali (BH 1)"
+            if(hostel == "B") return "Nilgiri (BH 2)"
+            if(hostel == "C") return "Shivalik (BH 3)"
+            if(hostel == "D") return "Gangotri (GH)"
         }
 
         return (
             <div className="mid container">
-                <h1>{blockToHostel(this.state.block)}</h1>
+                <h1>{blockToHostel(this.state.hostel)}</h1>
                 <br />
                 <form onSubmit={this.onSubmit}>
                     <div className="row">

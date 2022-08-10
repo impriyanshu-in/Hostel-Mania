@@ -9,7 +9,7 @@ module.exports = function validateStudentInput(data) {
   data.email = !isEmpty(data.email) ? data.email : "";
   data.batch = !isEmpty(data.batch) ? data.batch : "";
   data.id = !isEmpty(data.id) ? data.id : "";
-  data.block = !isEmpty(data.block) ? data.block : "";
+  data.hostel = !isEmpty(data.hostel) ? data.hostel : "";
   data.room = !isEmpty(data.room) ? data.room : "";
   data.gender = !isEmpty(data.gender) ? data.gender : "";
   if (!Validator.isEmail(data.email)) {
@@ -28,15 +28,15 @@ module.exports = function validateStudentInput(data) {
   if (Validator.isEmpty(data.id)) {
     errors.id = "Student Id is Required";
   }
-  if (Validator.isEmpty(data.block)) {
-    errors.block = "Block is Required";
+  if (Validator.isEmpty(data.hostel)) {
+    errors.hostel = "Hostel is Required";
   }
   if (Validator.isEmpty(data.room)) {
     errors.room = "Room is Required";
   }
-  if (Validator.isEmpty(data.gender) || !genders.includes(data.gender)) {
-    errors.gender = "Gender Missing or Invalid";
-  }
+  // if (Validator.isEmpty(data.gender) || !genders.includes(data.gender)) {
+  //   errors.gender = "Gender Missing or Invalid";
+  // }
 
   return {
     errors,

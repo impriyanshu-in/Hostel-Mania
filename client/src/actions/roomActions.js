@@ -7,10 +7,10 @@ import {
     DISABLE_ROOM_ACTION_LOADING,
 } from "./types";
 
-export const getRoomAction = (block) => dispatch => {
+export const getRoomAction = (hostel) => dispatch => {
     dispatch(enableRoomActionLoading());
     axios
-        .get(`/api/room/block/${block}`)
+        .get(`/api/room/hostel/${hostel}`)
         .then((res) => {
 
             dispatch({
@@ -36,7 +36,7 @@ export const createRoomAction = roomActionData => dispatch => {
                 type: GET_ROOM_ACTION,
                 payload: res.data
             });
-            dispatch(getRoomAction(roomActionData.block));
+            dispatch(getRoomAction(roomActionData.hostel));
         }
         )
         .catch((err) => {

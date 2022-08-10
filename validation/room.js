@@ -7,10 +7,10 @@ const validateRoomInput = data => {
   const blocks = ['A', 'B', 'C', 'D'];
   const genders = ['BOY', 'GIRL'];
   const work = ['CLEANING', 'REPAIR'];
-  const { id, block, gender, type, worker, time } = data
+  const { id, hostel, gender, type, worker, time } = data
 
   data.id = !isEmpty(data.id) ? data.id : "";
-  data.block = !isEmpty(data.block) ? data.block : "";
+  data.hostel = !isEmpty(data.hostel) ? data.hostel : "";
   data.gender = !isEmpty(data.gender) ? data.gender : "";
   data.type = !isEmpty(data.type) ? data.type : "";
   data.worker = !isEmpty(data.worker) ? data.worker : "";
@@ -21,8 +21,8 @@ const validateRoomInput = data => {
     errors.id = "Room id is missing";
   }
 
-  if (Validator.isEmpty(block) || !blocks.includes(block)) {
-    errors.block = "Room block is missing or invalid";
+  if (Validator.isEmpty(hostel) || !blocks.includes(hostel)) {
+    errors.hostel = "Room hostel is missing or invalid";
   }
 
   if (Validator.isEmpty(gender) || !genders.includes(gender)) {

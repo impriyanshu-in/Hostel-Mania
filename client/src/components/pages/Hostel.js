@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-class Block extends Component {
+class Hostel extends Component {
 
-    onBatchSelect(block) {
-        this.props.history.push(`/room/${block}`);
+    onBatchSelect(hostel) {
+        this.props.history.push(`/room/${hostel}`);
     }
     render() {
         return (
@@ -55,4 +55,4 @@ class Block extends Component {
     }
 }
 
-export default Block;
+export default Hostel;

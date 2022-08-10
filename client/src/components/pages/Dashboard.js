@@ -38,7 +38,7 @@ class Dashboard extends Component {
             <img src={bedRoom} className="card-img-top" alt="Cleaning" />
             <div className="card-body">
               <h5 className="card-title">Room Repair/Cleaning Status</h5>
-              <a href="/block">
+              <a href="/hostel">
                 Add Room Repair/Cleaning
                 </a>
             </div>
