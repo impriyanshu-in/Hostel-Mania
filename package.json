@@ -28,8 +28,8 @@
     "validator": "^12.1.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.8",
     "jest": "^26.6.1",
-    "nodemon": "^1.18.10",
-    "supertest": "^6.0.0"
+    "nodemon": "^1.18.10"
   }
 }
