@@ -14,7 +14,7 @@ const RoomSchema = new Schema({
   },
   hostel: {
     type: String,
-    enum: ['A', 'B', 'C', 'D'],
+    enum: ['BH 1', 'BH 2', 'BH 3', 'GH'],
     required: true,
     trim: true
   },
@@ -27,11 +27,11 @@ const RoomSchema = new Schema({
     trim: true,
     required: true
   },
-  gender: {
-    type: String,
-    enum: ['BOY', 'GIRL'],
-    required: true,
-  }
+  // gender: {
+  //   type: String,
+  //   enum: ['BOY', 'GIRL'],
+  //   required: true,
+  // }
 });
 
 module.exports = Student = mongoose.model("room", RoomSchema);

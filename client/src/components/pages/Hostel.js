@@ -12,7 +12,7 @@ class Hostel extends Component {
                     <div className="card" style={{ width: "12rem" }}>
                         <div className="card-body">
                             <h5 className="card-title">Aravali (BH 1)</h5>
-                            <p onClick={() => this.onBatchSelect('A')} className="card-text" style={{
+                            <p onClick={() => this.onBatchSelect('BH 1')} className="card-text" style={{
                                 cursor: 'pointer',
                                 color: '#00a4eb'
                             }}
@@ -22,7 +22,7 @@ class Hostel extends Component {
                     <div className="card" style={{ width: "12rem" }}>
                         <div className="card-body">
                             <h5 className="card-title">Nilgiri (BH 2)</h5>
-                            <p onClick={() => this.onBatchSelect('B')} className="card-text" style={{
+                            <p onClick={() => this.onBatchSelect('BH 2')} className="card-text" style={{
                                 cursor: 'pointer',
                                 color: '#00a4eb'
                             }}
@@ -32,7 +32,7 @@ class Hostel extends Component {
                     <div className="card" style={{ width: "12rem" }}>
                         <div className="card-body">
                             <h5 className="card-title">Shivalik (BH 3)</h5>
-                            <p onClick={() => this.onBatchSelect('C')} className="card-text" style={{
+                            <p onClick={() => this.onBatchSelect('BH 3')} className="card-text" style={{
                                 cursor: 'pointer',
                                 color: '#00a4eb'
                             }}
@@ -42,7 +42,7 @@ class Hostel extends Component {
                     <div className="card" style={{ width: "12rem" }}>
                         <div className="card-body">
                             <h5 className="card-title">Gangotri (GH)</h5>
-                            <p onClick={() => this.onBatchSelect('D')} className="card-text" style={{
+                            <p onClick={() => this.onBatchSelect('GH')} className="card-text" style={{
                                 cursor: 'pointer',
                                 color: '#00a4eb'
                             }}

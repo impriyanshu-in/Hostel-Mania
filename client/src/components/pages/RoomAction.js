@@ -72,7 +72,7 @@ class RoomAction extends Component {
                     <td>{el.type ? el.type : "-"}</td>
                     <td>{el.time ? el.time : "-"}</td>
                     <td>{el.worker ? el.worker : "-"}</td>
-                    <td>{el.gender ? el.gender : "-"}</td>
+                    {/* <td>{el.gender ? el.gender : "-"}</td> */}
                     <td style={{ cursor: 'pointer', color: '#00a4eb' }}
                         onClick=
                         {() => this.onDelete(el._id)}
@@ -84,10 +84,10 @@ class RoomAction extends Component {
         const { errors } = this.state;
 
         const blockToHostel = (hostel) =>{
-            if(hostel == "A") return "Aravali (BH 1)"
-            if(hostel == "B") return "Nilgiri (BH 2)"
-            if(hostel == "C") return "Shivalik (BH 3)"
-            if(hostel == "D") return "Gangotri (GH)"
+            if(hostel == "BH 1") return "Aravali (BH 1)"
+            if(hostel == "BH 2") return "Nilgiri (BH 2)"
+            if(hostel == "BH 3") return "Shivalik (BH 3)"
+            if(hostel == "GH") return "Gangotri (GH)"
         }
 
         return (
