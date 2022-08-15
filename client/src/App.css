@@ -41,3 +41,12 @@ img {
 .form-control::placeholder {
   color: #bbb !important;
 }
+
+.card-title{
+  color: #0078AA;
+}
+
+.card-text{
+  text-decoration: none;
+  color: black;
+}

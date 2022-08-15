@@ -32,7 +32,7 @@ class Dashboard extends Component {
             <a href="/student">
             <div className="card hoverable" style={{ width: "18rem", hover: '', height: '22rem' }}>
               <img src={student} className="card-img-top" alt="Cleaning" />
-                <div className="card-body" style={{ height: '10rem' }}>
+                <div className="card-body" style={{ height: '10rem'}}>
                 <h5 className="card-title">Student</h5>
               <span className="card-text">
                 Add New Student and Room allotment
@@ -48,7 +48,7 @@ class Dashboard extends Component {
             <img src={cleaning} className="card-img-top" alt="Cleaning" />
             <div className="card-body">
               <h5 className="card-title">Room Repair/Cleaning Status</h5>
-              <span>
+              <span className="card-text">
                 Add Room Repair/Cleaning
               </span>
             </div>
@@ -63,7 +63,7 @@ class Dashboard extends Component {
             <img src={staff} className="card-img-top" alt="Cleaning" />
             <div className="card-body">
               <h5 className="card-title">Staff Info</h5>
-              <span>
+              <span className="card-text">
                 Add more Staff or Check their info
               </span>
             </div>
