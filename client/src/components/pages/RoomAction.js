@@ -84,10 +84,12 @@ class RoomAction extends Component {
         const { errors } = this.state;
 
         const blockToHostel = (hostel) =>{
+             /* eslint-disable */
             if(hostel == "BH 1") return "Aravali (BH 1)"
             if(hostel == "BH 2") return "Nilgiri (BH 2)"
             if(hostel == "BH 3") return "Shivalik (BH 3)"
             if(hostel == "GH") return "Gangotri (GH)"
+             /* eslint-enable */
         }
 
         return (

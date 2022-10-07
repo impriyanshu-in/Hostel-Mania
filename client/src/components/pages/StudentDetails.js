@@ -103,10 +103,12 @@ class StudentDetails extends Component {
         const { errors } = this.state;
 
         const yearToCourse = (year)=>{
+            /* eslint-disable */
             if(year=="2018")    return "B.Tech"
             else if(year =="2019") return "IMT"
             else if(year =="2020") return "IMG"
             else if(year == "2021") return "Ph.D"
+            /* eslint-enable */
         } 
 
         
