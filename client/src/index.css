@@ -11,7 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("../src/img/background.svg");
+  /* background-image: url("../src/img/background.svg"); */
   background-position: 50% -40px;
   background-repeat: no-repeat;
   
