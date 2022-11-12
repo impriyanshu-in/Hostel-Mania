@@ -8,7 +8,7 @@ img {
 
 .landing {
   position: relative;
-  background: url("./img/hostel.jpg") no-repeat;
+  background: url("./bg.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -42,11 +42,11 @@ img {
   color: #bbb !important;
 }
 
-.card-title{
+.card-title {
   color: #0078AA;
 }
 
-.card-text{
+.card-text {
   text-decoration: none;
   color: black;
 }
