@@ -1,7 +1,8 @@
 # Hostel Mania
 Hostel Mania ia a top-notch hostel management system which makes a hostler's day to day life easy and problem free. It helps them in solving problems such as carpentry, plumbing, cleaning etc.
 This also makes their access to faciities easier and swift. 
- - Home Page
+
+ - The Home Page
  
  
 ![1](https://user-images.githubusercontent.com/87303531/201477780-624cf8b1-a7d1-4858-983c-b32938b2c125.png)
