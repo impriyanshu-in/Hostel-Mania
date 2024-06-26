@@ -1,5 +1,5 @@
 # Hostel Mania
-Hostel Mania ia a top-notch hostel management system which makes a hostler's day to day life easy and problem free. It helps them in solving problems such as carpentry, plumbing, cleaning etc.
+Hostel Mania ia a top-notch hostel management system which makes a hostler's day to day life easier and problem free. It helps them in solving problems such as carpentry, plumbing, cleaning etc.
 This also makes their access to faciities easier and swift. 
 
  - The Home Page
